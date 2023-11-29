@@ -1,0 +1,42 @@
+.searchbar {
+    margin: 5%;
+    display: inline-block;
+}
+#search-field{ 
+ width: 50em;
+ height: 4em;
+ border: 3px solid #3b3b3b;
+ border-radius: 30px;
+ margin-right: 4px;
+}
+#search-btn{
+    width: 8em;
+    height: 4em;
+    margin: 0;
+    border: 3px solid #3b3b3b;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+#search-btn:hover{
+background-color: #3b3b3b;
+color: white;
+}
+#student-radio, #faculty-radio{
+    width: 4em;
+    height: 2em;
+
+}
+span {
+    
+    color: #ffc217;
+}
+.info-card{
+    width: 80%;
+    margin-left: 5%;
+    background:rgba(0, 0, 0, 0.5);
+    padding: 2%;
+}
+.info-card h1{
+    color: white;
+}

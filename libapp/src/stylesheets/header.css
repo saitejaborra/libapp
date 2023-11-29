@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+ul {
+    font-size: 24px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 10%;
+}
+li {
+    display: inline-block;
+    margin-right: 50%;
+}
+ul li a {
+    color: white; 
+    text-decoration: none;
+}
+.menu-bar {
+    display: flex;
+    background-color: #3b3b3b;
+    justify-content: space-between;
+
+
+}
+img {
+    width: 200px;
+    height: 100px;
+    margin-left: 5%;
+}
