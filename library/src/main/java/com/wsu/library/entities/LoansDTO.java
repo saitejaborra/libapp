@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Entity
 @Data
-public class Loans {
+public class LoansDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private BigInteger id;
@@ -32,4 +32,7 @@ public class Loans {
     private LocalDate dateReturned;
     @Column
     private boolean Status;
+
+    @Column
+    private String title;
 }

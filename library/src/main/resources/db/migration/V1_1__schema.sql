@@ -19,7 +19,7 @@ CREATE TABLE students (
 );
 
 CREATE TABLE loans (
-    id BIGINT PRIMARY KEY,
+    id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     book_id BIGINT,
     borrower_id VARCHAR(15),
     issued_staff_id VARCHAR(15) NOT NULL,
@@ -28,7 +28,6 @@ CREATE TABLE loans (
     date_returned DATE,
     status SMALLINT NOT NULL,
     FOREIGN KEY (book_id) REFERENCES books(id),
-    FOREIGN KEY (borrower_id) REFERENCES borrowers(id),
     FOREIGN KEY (issued_staff_id) REFERENCES staff(id)
 );
 

@@ -11,6 +11,6 @@ import java.util.List;
 
 public interface LoansRepository extends JpaRepository<Loans, BigInteger> {
 
-    @Query(value = "Select * from loans where id= :studentId", nativeQuery = true)
+    @Query(value = "select * from loans where borrower_id= :studentId", nativeQuery = true)
     List<Loans> findLoansByID(@Param("studentId") String studentId);
 }

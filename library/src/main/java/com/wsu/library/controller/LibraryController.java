@@ -1,12 +1,11 @@
 package com.wsu.library.controller;
 
 
+import java.math.BigInteger;
 import java.util.List;
 import java.util.Optional;
 
-import com.wsu.library.entities.Loans;
-import com.wsu.library.entities.Staff;
-import com.wsu.library.entities.Students;
+import com.wsu.library.entities.*;
 import com.wsu.library.service.BooksService;
 import com.wsu.library.service.FacultyService;
 import com.wsu.library.service.LoansService;
@@ -15,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.wsu.library.entities.Books;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -58,6 +56,12 @@ public class LibraryController {
 	@GetMapping("/loans")
 	private ResponseEntity<List<Loans>> getLoansByIDs(@RequestParam String studentId) {
 		return ResponseEntity.ok(loansService.returnAllLoansByStudent(studentId));
+	}
+
+	@GetMapping("/addloan")
+	private ResponseEntity<Optional<List<Loans>>> addNewLoan(@RequestParam String memberId, @RequestParam BigInteger bookId,
+	@RequestParam String memberType) {
+		return ResponseEntity.ok(loansService.addNewLoans(memberId, bookId, memberType));
 	}
 
 }
