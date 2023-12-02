@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import './stylesheets/Inventory.css'
+import { NavLink } from "react-router-dom";
 
 function Inventory() {
     let [books, setbooks] = useState([]);
@@ -11,7 +12,7 @@ function Inventory() {
         }).catch((error) => {
             return error;
         });
-    },[]);
+    });
     const rows = books.map((item) =>  {
         return (<tr>
         <td>{item.title}</td>
@@ -21,7 +22,7 @@ function Inventory() {
     <td>{item.publicationYear}</td>
     <td>{item.numberOfPages}</td>
     <td>{item.availableCopies}</td>
-    <td><button id="lend-btn">Lend</button></td>
+    <td><NavLink to="/loans" state={item}><button id="lend-btn">Lend</button></NavLink></td>
     </tr>
     )})
     return(
