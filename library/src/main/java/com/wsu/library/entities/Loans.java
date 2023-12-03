@@ -5,7 +5,6 @@ import lombok.Data;
 
 import java.math.BigInteger;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Data

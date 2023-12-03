@@ -59,7 +59,7 @@ public class LibraryController {
 	}
 
 	@GetMapping("/addloan")
-	private ResponseEntity<Optional<List<Loans>>> addNewLoan(@RequestParam String memberId, @RequestParam BigInteger bookId,
+	private ResponseEntity<Optional<List<Loans >>> addNewLoan(@RequestParam String memberId, @RequestParam BigInteger bookId,
 	@RequestParam String memberType) {
 		return ResponseEntity.ok(loansService.addNewLoans(memberId, bookId, memberType));
 	}

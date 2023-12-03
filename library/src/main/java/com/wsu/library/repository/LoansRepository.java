@@ -1,7 +1,6 @@
 package com.wsu.library.repository;
 
 import com.wsu.library.entities.Loans;
-import com.wsu.library.entities.Students;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
