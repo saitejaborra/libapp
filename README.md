@@ -1,6 +1,6 @@
 # Group 14
 
-## github id's:
+## github user id's:
 Akhila Sirigireddy- reddyakhila634, Sai Teja Borra- saitejaborra
 
 ## project demo video link:
