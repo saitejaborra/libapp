@@ -12,7 +12,6 @@ function LendBooks() {
     let getBorrowedBooks= (wsuId, id, member) => axios.get(`http://localhost:8080/wsu/library/addloan?memberId=${wsuId}&bookId=${id}&memberType=${member}`)
     .then((response) => {
         setBorrowedBooks(response.data);
-        console.log(borrowedBooks);
         return response;
     }).catch((error) => {
         return error;
@@ -21,7 +20,7 @@ function LendBooks() {
     return(
         <Fragment>
         <div className="searchbar">
-        <input id="search-field" type="search" name="searchbar" onChange = {(event) => setwsuId(event.target.value)} placeholder="Enter the wsu id of the member to lend this book"/>
+        <input id="search-field" type="search" name="searchbar" onChange = {(event) => setwsuId(event.target.value)} placeholder="Enter the wsu id of the member to lend the selected book"/>
         <button id = "search-btn" onClick={() => {getBorrowedBooks(wsuId, location.state.id, member)}}>search</button>
         <input id="student-radio" type="radio" value ="student" name="member"  onChange={(event)=> setMember(event.target.value)} checked/>
         <label for = "student-radio">Student</label>

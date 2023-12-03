@@ -67,7 +67,6 @@ function Members() {
 }
 const getLoanDetails = (wsuId) => {
     loanDetails = axios.get(`http://localhost:8080/wsu/library/loans?studentId=${wsuId}`).then((response) => {
-        console.log(response.data);
          return setLoanDetails(response.data);
 ;    }).catch((error) => {
     return error;
